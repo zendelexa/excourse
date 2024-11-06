@@ -46,9 +46,8 @@
 \fancyhf{} % Clear all header and footer fields
 
 % Header
-\fancyhead[L]{}
-\fancyhead[R]{Страница \thepage\ из \pageref{LastPage}}
-
+\pagestyle{fancy}
+\fancyfoot[C]{Страница \thepage\ из \pageref{LastPage}}
 
 
 
@@ -74,7 +73,10 @@
 }
 
 
-
+\includeonly{
+  basic_mathematics/binary_exponentiation/patr,
+  basic_mathematics/modulo_calulations/patr,
+}
 
 \begin{document}
 
@@ -89,6 +91,7 @@
     \subsection{Кратко о спортивном программировании}
 \section{Асимптотика} 
 \section{Базовая матчасть}
+<<<<<<< HEAD
     \subsection{Быстрое возведение в степень}
         Текущая задача ставится очень просто: возвести некоторое число \(a\) в степень \(b\). Ограничимся тем, что $a$ и $b$ --- неотрицательные целые числа. На этом примере будет явно видна суть использования эффективных алгоритмов.
 
@@ -173,6 +176,10 @@ ll a;  // 0 <= a < MOD
 ll b;  // 0 < b < MOD
 ll div = (a * inverse(b)) % MOD;  // OK
 \end{lstlisting}
+=======
+    \input{basic_mathematics/binary_exponentiation/part}
+    \input{basic_mathematics/modulo_calculations/part}
+>>>>>>> 3180445 (add stucture)
     \subsection{XOR}
 
     XOR, или операция \emph{исключающего или}, --- математическая операция, принимающая два операнда (обозначается \(a \oplus b\)) и имеющая несколько полезных свойств:
