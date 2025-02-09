@@ -1,0 +1,38 @@
+\subsection{vector}
+
+\lstinline|vector| представляет собой упорядоченный список элементов одинакового типа.
+Создавать его можно разными способами:
+
+\begin{lstlisting}
+#include <vector>
+using namespace std;
+
+int main()
+{
+    vector<int> a;
+    vector<pair<int, int>> b(10);
+    vector<char> c(15, 'a');
+    vector<int> d = {1, 2, 3};
+}
+\end{lstlisting}
+Сверху создались три \lstinline|vector|. Первый --- пустой вектор, способный содержать в себе целые числа. Второй --- вектор из десяти пар целых чисел (все числа изначально --- нули). Третий --- вектор, содержащий пятнадцать букв \lstinline|'a'|. Четвёртый --- состоит из целых чисел \lstinline|1, 2, 3|.
+
+
+Определим вектор и число:
+\begin{lstlisting}
+vector<int> numbers = {1, 2, 3};
+int number = 4;
+\end{lstlisting}
+Векторы поддерживает следующие основные операции (больше можно найти на \href{https://ru.cppreference.com/w/cpp/container/vector}{cppreference}):
+
+\begin{table}[h]
+    \begin{tabular}{|l|c|c|}
+    \hline
+    \multicolumn{1}{|c|}{Операция} & Сложность & Пример \\ \hline
+    Добавление элемента в конец списка &  $O(1)$ & \lstinline|numbers.push_back(number)| \\ \hline
+    Удаление последнего элемента & $O(1)$ & \lstinline|numbers.pop_back()| \\ \hline
+    Просмотр произвольного элемента & $O(1)$ & \lstinline|numbers[i]| \\ 
+    \hline
+    \end{tabular}
+\end{table}
+
